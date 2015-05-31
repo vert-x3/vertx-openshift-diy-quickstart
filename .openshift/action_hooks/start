@@ -3,8 +3,12 @@
 # script. The application will work only if it binds to
 # $OPENSHIFT_DIY_IP:8080
 
-# As we use a custom JVM (not the one provided by openshift), we update the global variables
-export JAVA_HOME=$OPENSHIFT_DATA_DIR/jdk1.8.0_31
+# Compute Java 8 Home
+if [ -d /etc/alternatives/java_sdk_1.8.0 ]; then
+    export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
+else
+    export JAVA_HOME=$OPENSHIFT_VERTX_DIR/java
+fi
 export PATH=$JAVA_HOME/bin:$PATH
 
 export LOG=$OPENSHIFT_LOG_DIR/out.log
