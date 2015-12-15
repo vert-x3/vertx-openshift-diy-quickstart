@@ -1,7 +1,7 @@
-# Vert.x 3 Application Deployment on Openshift using the DIY Cartbridge
+# Vert.x 3 Application Deployment on Openshift using the DIY cartridge
 
 This guide explains how a vert.x 3 application can be deployed on OpenShift using the
-[DIY cartbridge](https://developers.openshift.com/en/diy-overview.html).
+[DIY cartridge](https://developers.openshift.com/en/diy-overview.html).
 
 Be aware that the DIY Cartbridge does not support
 [scalability](https://developers.openshift.com/en/managing-scaling.html#supported-cartridges). However if you just
@@ -24,6 +24,8 @@ Once done, click on the `Create Application` button (on the bottom of the page).
 don't worry.
 
 **3. Next steps**
+
+To use openshift ssh & git to push to openshift. need to [install & setup rhc](Https://developers.openshift.com/en/managing-client-tools.html)
 
 Almost there. On this page, you can get the Git repository url. For example:
 
